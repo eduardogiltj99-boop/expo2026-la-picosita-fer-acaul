@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Picosita – La chispa del sabor</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef6e8;--ink:#12341f;--green:#1f6b3a;--green2:#2e8b4f;--card:#fff;--red:#c8281e;--yellow:#f5c518;--muted:#3f5a48}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Nunito',system-ui,sans-serif;line-height:1.6}
+h1,h2,h3{font-family:'Baloo 2','Nunito',sans-serif;line-height:1.1;margin:0}
+img,video{max-width:100%;display:block}
+nav{position:sticky;top:0;z-index:5;background:var(--green);display:flex;gap:18px;align-items:center;justify-content:space-between;padding:10px 20px;flex-wrap:wrap}
+nav b{font-family:'Baloo 2',sans-serif;font-size:1.3rem;color:#fff}
+nav div{display:flex;gap:16px;flex-wrap:wrap}
+nav a{color:#fff;text-decoration:none;font-weight:600}
+nav a:hover{color:var(--yellow);text-decoration:underline}
+.wrap{max-width:1050px;margin:0 auto;padding:0 20px}
+.hero{background:var(--green);color:#fff;padding:48px 0 56px}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:36px;align-items:center}
+.hero h1{font-size:clamp(3rem,9vw,5.6rem);font-weight:800}
+.hero h1 span{color:var(--yellow)}
+.hero p{font-size:1.2rem;max-width:34ch}
+.btn{display:inline-block;background:var(--yellow);color:#12341f;font-weight:700;padding:12px 24px;border-radius:999px;text-decoration:none;margin-top:8px}
+.btn:hover{background:#fff}
+.video{border:6px solid var(--yellow);border-radius:22px;overflow:hidden;background:#000;max-width:300px;justify-self:center}
+.video video{width:100%;height:auto}
+section{padding:60px 0}
+h2{font-size:clamp(2rem,5vw,3rem);color:var(--green);margin-bottom:8px}
+.lead{color:var(--muted);max-width:60ch;margin:0 0 28px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+.pic{border-radius:18px;overflow:hidden;box-shadow:0 6px 24px rgba(18,52,31,.25)}
+ul.ing{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:8px 16px}
+ul.ing li{padding-left:26px;position:relative}
+ul.ing li:before{content:"✔";position:absolute;left:0;color:var(--green2)}
+.alt{background:var(--card)}
+.split.rev .pic{order:2}
+.prices{display:grid;gap:10px;margin:16px 0 0;padding:0;list-style:none}
+.prices li{display:flex;justify-content:space-between;gap:12px;border-bottom:2px dashed var(--green2);padding:6px 0}
+.prices strong{color:var(--red)}
+footer{background:var(--green);color:#fff;text-align:center;padding:28px 20px}
+@media (max-width:760px){.hero .wrap,.split{grid-template-columns:1fr}.split.rev .pic{order:0}.hero{padding-top:32px}}
+</style>
+</head>
+<body>
+
+<nav><b>La Picosita</b><div><a href="#video">Video</a><a href="#salsa">La salsa</a><a href="#acompana">Acompañantes</a><a href="#precios">Precios</a></div></nav>
+
+<header class="hero"><div class="wrap">
+<div>
+<h1>La <span>Picosita</span></h1>
+<p>La chispa del sabor. Salsa de chile habanero con limón, chamoy y tajín para tus frutas y snacks.</p>
+<a class="btn" href="#precios">Ver precios</a>
+</div>
+<div class="video" id="video"><video controls playsinline preload="metadata" src="expo2026/video.mp4"></video></div>
+</div></header>
+
+<section id="salsa"><div class="wrap split">
+<div>
+<h2>Picante, dulce y ácido</h2>
+<p class="lead">Una mezcla perfecta para disfrutar cada bocado.</p>
+<ul class="ing"><li>Salsa de chile habanero</li><li>Picamont</li><li>Chamoy</li><li>Chile tajín</li><li>Limón</li><li>Sal</li><li>Pepino</li></ul>
+</div>
+<div class="pic"><img src="expo2026/salsa.jpeg" alt="Botella de La Picosita con piña y pepino"></div>
+</div></section>
+
+<section id="acompana" class="alt"><div class="wrap split rev">
+<div>
+<h2>¿Con qué acompañar La Picosita?</h2>
+<p class="lead">Piñas, mangos, sandía, pepino, jícama, frutas mixtas, snacks y dulces. Combina, disfruta y siente la chispa del sabor.</p>
+</div>
+<div class="pic" style="max-width:380px;justify-self:center"><img src="expo2026/acompanantes.jpeg" alt="Frutas y snacks para acompañar La Picosita"></div>
+</div></section>
+
+<section id="precios"><div class="wrap split">
+<div>
+<h2>Precios y extras</h2>
+<p class="lead">Elige tu tamaño de salsa y agrega un croissant relleno.</p>
+<ul class="prices"><li>Salsa grande <strong>Q45.00</strong></li><li>Salsa pequeña <strong>Q25.00</strong></li><li>Croissant de chocolate <strong>Q10.00</strong></li><li>Croissant de jamón y queso <strong>Q15.00</strong></li><li>Croissant de mermelada <strong>Q13.00</strong></li></ul>
+</div>
+<div class="pic" style="max-width:420px;justify-self:center"><img src="expo2026/precios.jpeg" alt="Precios de La Picosita y croissants"></div>
+</div></section>
+
+<footer>© 2026 La Picosita · La chispa del sabor</footer>
+
+</body>
+</html>
